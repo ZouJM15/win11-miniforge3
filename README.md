@@ -110,7 +110,7 @@ mirrored_channels:
 mamba create -n myai python=3.10
 ```
 
-创建一个名为 `myai` 的环境。
+创建一个名为 `myai` 的环境，此名字自己设定，我在此只是举个例子，下同。
 
 #### ② **激活环境**
 
