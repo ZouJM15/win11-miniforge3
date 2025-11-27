@@ -1,7 +1,6 @@
 # win11 配置 miniforge3
-本文详细介绍了在Windows11系统上配置Miniforge3的完整流程。主要内容包括：1)从清华镜像站或GitHub下载安装Miniforge3；2)配置.condarc文件设置镜像源和环境目录；3)提供全面的Miniforge/Mamba指令集，涵盖环境创建、包管理、环境导出迁移等操作。
-
 <a id="windows11-config-miniforge3"></a>
+本文详细介绍了在Windows11系统上配置Miniforge3的完整流程。主要内容包括：1)从清华镜像站或GitHub下载安装Miniforge3；2)配置.condarc文件设置镜像源和环境目录；3)提供全面的Miniforge/Mamba指令集，涵盖环境创建、包管理、环境导出迁移等操作。
 
 ## 目录
 
@@ -17,22 +16,18 @@
     - [📂 环境导出与迁移](#env-export-migration)
     - [🧠 AI 项目常用 Conda 指令](#ai-project-conda-commands)
 
+<a id="miniforge-download-install"></a>
 ## miniforge 下载及安装
 
-<a id="miniforge-download-install"></a>
-
-### 下载
-
 <a id="miniforge-download"></a>
+### 下载
 
 1. 清华大学开源软件镜像站：[清华镜像 - Miniforge](https://mirrors.tuna.tsinghua.edu.cn/github-release/conda-forge/miniforge/LatestRelease/)
 2. GitHub: [conda-forge/miniforge](https://github.com/conda-forge/miniforge)
-
 - 下载 `Miniforge3-Windows-x86_64.exe` 后安装
 
-### 安装
-
 <a id="miniforge-install"></a>
+### 安装
 
 几个特殊选项：
 
@@ -41,9 +36,8 @@
 
 ---
 
-## .condarc 文件配置
-
 <a id="condarc-file-config"></a>
+## .condarc 文件配置
 
 位置：C盘-> user（用户）-> 用户名 -> .condarc
 **若没有则在此位置新建**
@@ -96,14 +90,11 @@ mirrored_channels:
 
 ---
 
+<a id="miniforge-commands"></a>
 ## miniforge指令
 
-<a id="miniforge-commands"></a>
-
-### 🚀 常用指令
-
 <a id="common-commands"></a>
-
+### 🚀 常用指令
 #### ① **创建环境（推荐 mamba，更快）**
 
 ```bash
@@ -140,7 +131,7 @@ mamba env remove -n myai
 
 #### ⑥ **查看信息**
 
-``` bash
+```bash
 mamba --version    # 输出版本号
 mamba info         # 查看环境信息
 # 或 conda --version    
@@ -149,10 +140,8 @@ mamba info         # 查看环境信息
 
 ---
 
-### 📦 包管理常用指令
-
 <a id="package-management-commands"></a>
-
+### 📦 包管理常用指令
 #### 安装包
 
 ```bash
@@ -197,10 +186,8 @@ conda list
 
 ---
 
-### 🔧 环境配置相关指令
-
 <a id="env-config-commands"></a>
-
+### 🔧 环境配置相关指令
 #### 查看当前配置
 
 ```bash
@@ -223,10 +210,8 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 
 ---
 
-### 📂 环境导出与迁移
-
 <a id="env-export-migration"></a>
-
+### 📂 环境导出与迁移
 #### 导出环境（复制给别人/备份）
 
 ```bash
@@ -241,10 +226,8 @@ mamba env create -f environment.yml
 
 ---
 
-### 🧠 AI 项目常用 Conda 指令
-
 <a id="ai-project-conda-commands"></a>
-
+### 🧠 AI 项目常用 Conda 指令
 #### 安装 PyTorch（CPU）
 
 ```bash
@@ -272,6 +255,11 @@ mamba install jupyterlab
 ```
 
 #### 安装 OpenAI SDK
+
+```bash
+pip install openai
+```
+
 
 ```bash
 pip install openai
